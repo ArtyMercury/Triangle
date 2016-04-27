@@ -22,15 +22,15 @@ namespace Max_sum_triangle
 
             string path = AppDomain.CurrentDomain.BaseDirectory + @"..\triangles\simple_triangle.txt";
             int[][] dataTriangle = Triangle(path);
-            int lines = dataTriangle.GetLength(0);
-            int[] maxValue = new int[lines];
+            int rows = dataTriangle.GetLength(0);
+            int[] maxValue = new int[rows];
 
-            for (int i = 0; i < lines; i++)
+            for (int i = 0; i < rows; i++)
             {
-                maxValue[i] = dataTriangle[lines - 1][i];
+                maxValue[i] = dataTriangle[rows - 1][i];
             }
 
-            for (int i = lines - 2; i >= 0; i--)
+            for (int i = rows - 2; i >= 0; i--)
             {
                 for (int j = 0; j <= i; j++)
                 {
